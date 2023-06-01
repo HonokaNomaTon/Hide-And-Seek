@@ -37,6 +37,9 @@ public class RayController : MonoBehaviour
             // 右コントローラのAボタンを押した場合
             if (OVRInput.GetDown(OVRInput.RawButton.A))
             {
+                target.GetComponent<Target>().ShowJudgeSprite();
+
+                /*
                 if (target.CompareTag("Target"))
                 {
                     // ブロックを赤色に変化させる。
@@ -47,6 +50,7 @@ public class RayController : MonoBehaviour
                     // ブロックを青色に変化させる。
                     target.GetComponent<MeshRenderer>().material.color = Color.blue;
                 }
+                */
             }
         }
         else
