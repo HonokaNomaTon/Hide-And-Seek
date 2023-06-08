@@ -19,10 +19,7 @@ public class ControllerManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("c"))
-        {
-            ChangeScene();
-        }
+
     }
 
     /// <summary>
@@ -43,8 +40,8 @@ public class ControllerManager : MonoBehaviour
     /// <summary>
     /// Sceneの切り替え
     /// </summary>
-    void ChangeScene()
+    public void ChangeScene()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Stage2");
     }
 }

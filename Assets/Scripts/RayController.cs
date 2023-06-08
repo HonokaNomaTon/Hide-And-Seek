@@ -24,33 +24,17 @@ public class RayController : MonoBehaviour
             lineRenderer.SetPosition(1, hit.point);
 
             GameObject target = hit.collider.gameObject;
-            if (target.CompareTag("Target")){
-                //左のコントローラーを0.1秒間振動させる
-                StartCoroutine(Vibrate(duration: 0.1f, controller: OVRInput.Controller.LTouch));
-            }
-            if (target.CompareTag("Fake"))
+            if (target.CompareTag("Target") || target.CompareTag("Fake"))
             {
                 //左のコントローラーを0.1秒間振動させる
                 StartCoroutine(Vibrate(duration: 0.1f, controller: OVRInput.Controller.LTouch));
             }
+
 
             // 右コントローラのAボタンを押した場合
             if (OVRInput.GetDown(OVRInput.RawButton.A))
             {
                 target.GetComponent<Target>().ShowJudgeSprite();
-
-                /*
-                if (target.CompareTag("Target"))
-                {
-                    // ブロックを赤色に変化させる。
-                    target.GetComponent<MeshRenderer>().material.color = Color.red;
-                }
-                if (target.CompareTag("Fake"))
-                {
-                    // ブロックを青色に変化させる。
-                    target.GetComponent<MeshRenderer>().material.color = Color.blue;
-                }
-                */
             }
         }
         else
