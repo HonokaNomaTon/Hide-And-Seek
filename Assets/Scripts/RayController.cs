@@ -28,13 +28,14 @@ public class RayController : MonoBehaviour
             {
                 //左のコントローラーを0.1秒間振動させる
                 StartCoroutine(Vibrate(duration: 0.1f, controller: OVRInput.Controller.LTouch));
+                target.GetComponent<Tongullkun>().Select();
             }
 
 
             // 右コントローラのAボタンを押した場合
             if (OVRInput.GetDown(OVRInput.RawButton.A))
             {
-                target.GetComponent<Target>().ShowJudgeSprite();
+                target.GetComponent<Tongullkun>().Found();
             }
         }
         else
