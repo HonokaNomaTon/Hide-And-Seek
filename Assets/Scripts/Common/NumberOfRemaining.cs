@@ -26,12 +26,13 @@ public class NumberOfRemaining : MonoBehaviour
             ClearText.text = "ゲームクリア！";
             Invoke(nameof(nextStage), 2.0f);
         }
+    }
 
-        void nextStage()
-        {
-            //まだ変わらないです！
-            //一瞬しか呼ばれてないからかも！
-            _controllermanager.ChangeScene();
-        }
+    /// <summary>
+    /// 次のステージへ遷移
+    /// </summary>
+    void nextStage()
+    {
+        _controllermanager.ChangeScene();
     }
 }
