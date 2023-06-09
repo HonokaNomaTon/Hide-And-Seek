@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3858961775722806885}
   - component: {fileID: 3935499946074318688}
   m_Layer: 0
-  m_Name: TargetPrefab
-  m_TagString: Target
+  m_Name: FakePrefab
+  m_TagString: Fake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02470264d925b45ab92ee32464090361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  judgeSprite: {fileID: 21300000, guid: 96887e384d4f741efaa68f9fd8ae6484, type: 3}
+  judgeSprite: {fileID: 21300000, guid: 3b1d2972623514b06a442c088912b4db, type: 3}
   judgeSpriteRenderer: {fileID: 7242700263127318028}
   tongullkunSpriteRenderer: {fileID: 3858961776757895755}
 --- !u!1 &3858961776757895753
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dd1a4fe6b2e804d2e8fdfc091911ab3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a3588096cde042e4b4cd764ba47ca7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
