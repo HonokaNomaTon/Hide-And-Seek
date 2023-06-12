@@ -6,6 +6,7 @@ public class RayController : MonoBehaviour
     [SerializeField]private Transform anchor;
     private float maxDistance = 100;
     private LineRenderer lineRenderer;
+    GameObject target;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class RayController : MonoBehaviour
         {
             lineRenderer.SetPosition(1, hit.point);
 
-            GameObject target = hit.collider.gameObject;
+            target = hit.collider.gameObject;
             if (target.CompareTag("Target") || target.CompareTag("Fake"))
             {
                 //左のコントローラーを0.1秒間振動させる
@@ -33,7 +34,7 @@ public class RayController : MonoBehaviour
 
 
             // 右コントローラのAボタンを押した場合
-            if (OVRInput.GetDown(OVRInput.RawButton.A))
+            if (OVRInput.GetDown(OVRInput.RawButton.A) || Input.GetKeyDown(KeyCode.A))
             {
                 target.GetComponent<Tongullkun>().Found();
             }
@@ -41,6 +42,7 @@ public class RayController : MonoBehaviour
         else
         {
             lineRenderer.SetPosition(1, ray.origin + (ray.direction * maxDistance));
+            target.GetComponent<Tongullkun>().Hidden();
         }
     }
 

@@ -21,7 +21,7 @@ public class Tongullkun : MonoBehaviour
 
     void Start()
     {
-
+        _state = TONGULL_STATE.HIDDEN;
     }
 
     
@@ -30,10 +30,10 @@ public class Tongullkun : MonoBehaviour
         switch (_state)
         {
             case TONGULL_STATE.HIDDEN:
-                ChangeColor(255);
+                ChangeColor(1);
                 break;
             case TONGULL_STATE.SELECT:
-                ChangeColor(176);
+                ChangeColor(0.65f);
                 break;
         }
     }
@@ -56,6 +56,13 @@ public class Tongullkun : MonoBehaviour
 
     }
 
+    // トンガルくんが見つかっていない状態・隠れている状態の時
+    public void Hidden()
+    {
+        _state = TONGULL_STATE.HIDDEN;
+        ChangeColor(1);
+    }
+
     /// <summary>
     /// 判定用のSpriteを表示
     /// </summary>
@@ -63,12 +70,13 @@ public class Tongullkun : MonoBehaviour
     {
         judgeSpriteRenderer.sprite = judgeSprite;
         this.tag = "Finish";
+        ChangeColor(1);
     }
 
     /// <summary>
     /// トンガルくんSpriteの色変更
     /// </summary>
-    private void ChangeColor(int colorValue)
+    private void ChangeColor(float colorValue)
     {
         tongullkunSpriteRenderer.color = new Color(colorValue, colorValue, colorValue);
     }
