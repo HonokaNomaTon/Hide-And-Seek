@@ -3,36 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using System.Linq;
 
 public class NumberOfRemaining : MonoBehaviour
 {
     public Text NumberObRemaining;
-    public Text ClearText;
-    public ControllerManager _controllermanager;
+    [SerializeField]
+    private GameManager _gameManager;
+
+    // エリア内にいるトンガルくんの個数を保持する配列
+    private GameObject[] _tongullkunObjects;
+
+    // 見つけていないトンガルくんの数
+    private int _remainingNumberOfTongullkun;
+
+    private bool _isGameClear;
+
+
     void Start()
     {
-        
+        _tongullkunObjects = GameObject.FindGameObjectsWithTag("Target");
+        _remainingNumberOfTongullkun = _tongullkunObjects.Length + 1;
     }
 
     void Update()
     {
-        GameObject[] tongullkunObjects = GameObject.FindGameObjectsWithTag("Target");
-        NumberObRemaining.text = "あと" + tongullkunObjects.Length.ToString() +"人隠れてるよ";
-
-
-        float a = float.Parse(tongullkunObjects.Length.ToString());
-        if (a < 1)
+        /*
+        for(int i=0; i < _tongullkunObjects.Length; i++)
         {
-            ClearText.text = "ゲームクリア！";
-            Invoke(nameof(nextStage), 2.0f);
+            if (_tongullkunObjects[i].CompareTag("Target"))
+            {
+                _remainingNumberOfTongullkun = i;
+            }
         }
-    }
+        */
 
-    /// <summary>
-    /// 次のステージへ遷移
-    /// </summary>
-    void nextStage()
-    {
-        _controllermanager.ChangeScene();
+        
+        NumberObRemaining.text = "あと" + _remainingNumberOfTongullkun + "人隠れてるよ";
+
+        // 見つかっていないトンガルくんが0体かつ、_isGameClearがfalseの場合はクリア
+        float a = float.Parse(_tongullkunObjects.Length.ToString());
+        if (a < 1 && !_isGameClear)
+        {
+            _isGameClear = true;
+            _gameManager.GetComponent<GameManager>().GameClear();
+        }
     }
 }

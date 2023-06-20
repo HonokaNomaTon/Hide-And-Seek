@@ -42,7 +42,11 @@ public class RayController : MonoBehaviour
         else
         {
             lineRenderer.SetPosition(1, ray.origin + (ray.direction * maxDistance));
-            target.GetComponent<Tongullkun>().Hidden();
+
+            if (target != null)
+            {
+                target.GetComponent<Tongullkun>().Hidden();
+            }
         }
     }
 
