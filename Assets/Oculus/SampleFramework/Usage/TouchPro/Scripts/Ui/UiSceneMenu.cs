@@ -19,10 +19,10 @@ public class UiSceneMenu : MonoBehaviour
 
     private void Awake()
     {
-        m_activeScene = SceneManager.GetActiveScene();
+        m_activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
 
         // Build labels
-        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; ++i)
+        for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings; ++i)
         {
             string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
             CreateLabel(i, scenePath);
@@ -31,7 +31,7 @@ public class UiSceneMenu : MonoBehaviour
 
     private void Update()
     {
-        int sceneCount = SceneManager.sceneCountInBuildSettings;
+        int sceneCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
         if (InputPrevScene())
         {
             ChangeScene((m_activeScene.buildIndex - 1 + sceneCount) % sceneCount);
@@ -83,7 +83,7 @@ public class UiSceneMenu : MonoBehaviour
 
     private void ChangeScene(int nextScene)
     {
-        SceneManager.LoadScene(nextScene);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
     }
 
     private void CreateLabel(int sceneIndex, string scenePath)
