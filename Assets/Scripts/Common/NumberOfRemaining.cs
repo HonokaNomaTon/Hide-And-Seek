@@ -13,38 +13,41 @@ public class NumberOfRemaining : MonoBehaviour
     private GameManager _gameManager;
 
     // エリア内にいるトンガルくんの個数を保持する配列
-    private GameObject[] _tongullkunObjects;
+    private List<GameObject> _tongullkunObjects;
 
     // 見つけていないトンガルくんの数
     private int _remainingNumberOfTongullkun;
 
-    private bool _isGameClear;
+    private bool _isGameClear = false;
 
 
     void Start()
     {
-        _tongullkunObjects = GameObject.FindGameObjectsWithTag("Target");
-        _remainingNumberOfTongullkun = _tongullkunObjects.Length + 1;
+
     }
 
     void Update()
     {
-        /*
-        for(int i=0; i < _tongullkunObjects.Length; i++)
-        {
-            if (_tongullkunObjects[i].CompareTag("Target"))
-            {
-                _remainingNumberOfTongullkun = i;
-            }
-        }
-        */
 
-        
+    }
+
+    public void SetTongullkunCount()
+    {
+        _tongullkunObjects = _gameManager.TargetTongullkuns;
+        _remainingNumberOfTongullkun = _tongullkunObjects.Count;
+
         NumberObRemaining.text = "あと" + _remainingNumberOfTongullkun + "人隠れてるよ";
 
+    }
+
+    public void UpdateTongullkunCount()
+    {
+        _remainingNumberOfTongullkun -= 1;
+        NumberObRemaining.text = "あと" + _remainingNumberOfTongullkun + "人隠れてるよ";
+
+
         // 見つかっていないトンガルくんが0体かつ、_isGameClearがfalseの場合はクリア
-        float a = float.Parse(_tongullkunObjects.Length.ToString());
-        if (a < 1 && !_isGameClear)
+        if (_remainingNumberOfTongullkun < 1 && !_isGameClear)
         {
             _isGameClear = true;
             _gameManager.GetComponent<GameManager>().GameClear();

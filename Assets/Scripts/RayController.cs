@@ -8,6 +8,9 @@ public class RayController : MonoBehaviour
     private LineRenderer lineRenderer;
     GameObject target;
 
+    [SerializeField]
+    private NumberOfRemaining _numberOfRemaining;
+
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
@@ -37,6 +40,7 @@ public class RayController : MonoBehaviour
             if (OVRInput.GetDown(OVRInput.RawButton.A) || Input.GetKeyDown(KeyCode.A))
             {
                 target.GetComponent<Tongullkun>().Found();
+                _numberOfRemaining.UpdateTongullkunCount();
             }
         }
         else
