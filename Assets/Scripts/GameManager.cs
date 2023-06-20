@@ -18,11 +18,24 @@ public class GameManager : MonoBehaviour
     private int _generateFakeTongullkunCount;
 
     // 各トンガルくんを管理する配列
-    private Tongullkun[] _targetTongullkuns;
-    private Tongullkun[] _fakeTongullkuns;
+    private List<GameObject> _targetTongullkuns = new List<GameObject>();
+    public List<GameObject> TargetTongullkuns
+    {
+        get { return _targetTongullkuns; }
+    }
+    private List<GameObject> _fakeTongullkuns = new List<GameObject>();
+    public List<GameObject> FakeTongullkuns
+    {
+        get { return _fakeTongullkuns; }
+    }
 
     [SerializeField]
     private Text _clearText;
+
+    [SerializeField]
+    private NumberOfRemaining _numberOfRemaining;
+
+    private GameObject targetObj, fakeObj;
 
     void Start()
     {
@@ -42,13 +55,17 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < _generateTargetTongullkunCount; i++)
         {
-            GameObject targetObj = Instantiate(_targetTongullkunPrefab, new Vector3(2f,1.3f,6f), Quaternion.identity);
+            targetObj = Instantiate(_targetTongullkunPrefab, new Vector3(2f,1.3f,6f), Quaternion.identity);
+            _targetTongullkuns.Add(targetObj);
         }
 
         for (int i = 0; i < _generateFakeTongullkunCount; i++)
         {
-            GameObject fakeObj = Instantiate(_fakeTongullkunPrefab, new Vector3(-2f, 1.3f, 6f), Quaternion.identity);
+            fakeObj = Instantiate(_fakeTongullkunPrefab, new Vector3(-2f, 1.3f, 6f), Quaternion.identity);
+            _fakeTongullkuns.Add(fakeObj);
         }
+
+        _numberOfRemaining.SetTongullkunCount();
     }
 
     /// <summary>
