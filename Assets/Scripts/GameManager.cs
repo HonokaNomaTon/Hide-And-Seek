@@ -37,6 +37,9 @@ public class GameManager : MonoBehaviour
 
     private GameObject targetObj, fakeObj;
 
+    [SerializeField]
+    private List<Vector3> TongullPosList = new List<Vector3>();
+
     void Start()
     {
         GenerateTongullkun();
@@ -55,13 +58,17 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < _generateTargetTongullkunCount; i++)
         {
-            targetObj = Instantiate(_targetTongullkunPrefab, new Vector3(2f,1.3f,6f), Quaternion.identity);
+            int targetTongullPosNum = GetPosition();
+            targetObj = Instantiate(_targetTongullkunPrefab, TongullPosList[targetTongullPosNum], Quaternion.identity);
+            DeletePosition(targetTongullPosNum);
             _targetTongullkuns.Add(targetObj);
         }
 
         for (int i = 0; i < _generateFakeTongullkunCount; i++)
         {
-            fakeObj = Instantiate(_fakeTongullkunPrefab, new Vector3(-2f, 1.3f, 6f), Quaternion.identity);
+            int fakeTongullPosNum = GetPosition();
+            fakeObj = Instantiate(_fakeTongullkunPrefab, TongullPosList[fakeTongullPosNum], Quaternion.identity);
+            DeletePosition(fakeTongullPosNum);
             _fakeTongullkuns.Add(fakeObj);
         }
 
@@ -83,5 +90,22 @@ public class GameManager : MonoBehaviour
     void NextStage()
     {
         SceneManager.Instance.ChangeScene();
+    }
+
+    /// <summary>
+    /// トンガルくん生成位置を取得
+    /// </summary>
+    int GetPosition()
+    {
+        int pos = Random.Range(0, TongullPosList.Count);
+        return pos;
+    }
+
+    /// <summary>
+    /// トンガルくん生成位置リストから削除
+    /// </summary>
+    private void DeletePosition(int num)
+    {
+        TongullPosList.RemoveAt(num);
     }
 }
