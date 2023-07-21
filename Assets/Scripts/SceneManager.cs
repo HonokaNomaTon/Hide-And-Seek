@@ -42,7 +42,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
     /// </summary>
     public void ChangeScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Stage2");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Stage2_1");
         Debug.Log("Scene読み込み");
 
         /*
