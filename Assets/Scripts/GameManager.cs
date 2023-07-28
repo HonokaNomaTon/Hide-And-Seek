@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private List<Vector3> TongullPosList = new List<Vector3>();
 
+    [SerializeField]
+    private List<Vector3> TongullRotateList = new List<Vector3>();
+
     void Start()
     {
         GenerateTongullkun();
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < _generateTargetTongullkunCount; i++)
         {
             int targetTongullPosNum = GetPosition();
-            targetObj = Instantiate(_targetTongullkunPrefab, TongullPosList[targetTongullPosNum], Quaternion.identity);
+            targetObj = Instantiate(_targetTongullkunPrefab, TongullPosList[targetTongullPosNum], Quaternion.Euler(TongullRotateList[targetTongullPosNum]));
             DeletePosition(targetTongullPosNum);
             _targetTongullkuns.Add(targetObj);
         }
@@ -67,7 +70,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < _generateFakeTongullkunCount; i++)
         {
             int fakeTongullPosNum = GetPosition();
-            fakeObj = Instantiate(_fakeTongullkunPrefab, TongullPosList[fakeTongullPosNum], Quaternion.identity);
+            fakeObj = Instantiate(_fakeTongullkunPrefab, TongullPosList[fakeTongullPosNum], Quaternion.Euler(TongullRotateList[fakeTongullPosNum]));
             DeletePosition(fakeTongullPosNum);
             _fakeTongullkuns.Add(fakeObj);
         }
