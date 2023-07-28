@@ -2607,7 +2607,7 @@ MonoBehaviour:
   - {x: 36.5, y: 1, z: 45}
   - {x: -40, y: 1, z: 20.5}
   - {x: 35, y: 1, z: -31}
-  - {x: -48, y: 1, z: -28}
+  - {x: -10, y: 13, z: -26}
 --- !u!1 &501879479443547140
 GameObject:
   m_ObjectHideFlags: 0
