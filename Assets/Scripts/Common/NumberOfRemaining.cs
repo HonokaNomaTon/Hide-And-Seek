@@ -36,17 +36,17 @@ public class NumberOfRemaining : MonoBehaviour
         _tongullkunObjects = _gameManager.TargetTongullkuns;
         _remainingNumberOfTongullkun = _tongullkunObjects.Count;
 
-        NumberObRemaining.text = "あと" + _remainingNumberOfTongullkun + "人隠れてるよ";
+        NumberObRemaining.text = "あと" + _remainingNumberOfTongullkun + "匹隠れてるよ";
 
     }
 
     public void UpdateTongullkunCount()
     {
         _remainingNumberOfTongullkun -= 1;
-        NumberObRemaining.text = "あと" + _remainingNumberOfTongullkun + "人隠れてるよ";
+        NumberObRemaining.text = "あと" + _remainingNumberOfTongullkun + "匹隠れてるよ";
 
 
-        // 見つかっていないトンガルくんが0体かつ、_isGameClearがfalseの場合はクリア
+        // 見つかっていないトンガルくんが0匹かつ、_isGameClearがfalseの場合はクリア
         if (_remainingNumberOfTongullkun < 1 && !_isGameClear)
         {
             _isGameClear = true;
