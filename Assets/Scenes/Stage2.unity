@@ -3193,10 +3193,14 @@ MonoBehaviour:
   _numberOfRemaining: {fileID: 501879478548921796}
   TongullPosList:
   - {x: 36.5, y: 1, z: 45}
-  - {x: -40, y: 1, z: 20.5}
+  - {x: -46, y: 22.3, z: 5.5}
   - {x: 35, y: 1, z: -31}
-  - {x: -10, y: 13, z: -26}
-  TongullRotateList: []
+  - {x: -37, y: 9.2, z: -42}
+  TongullRotateList:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 90, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 90, z: 0}
 --- !u!1 &501879479443547140
 GameObject:
   m_ObjectHideFlags: 0

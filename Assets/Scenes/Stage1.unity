@@ -565,6 +565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SardineSkinWithDemoScript
       objectReference: {fileID: 0}
+    - target: {fileID: 159700, guid: 4111a63ec6a85c744a305e1dfd0869f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 412992, guid: 4111a63ec6a85c744a305e1dfd0869f9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -991,9 +995,9 @@ MonoBehaviour:
   - {x: 0, y: 1, z: 5}
   - {x: 3, y: 1, z: 5}
   TongullRotateList:
-  - {x: 0, y: 90, z: 0}
-  - {x: 0, y: -45, z: 0}
-  - {x: 0, y: 70, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!1 &501879479443547140
 GameObject:
   m_ObjectHideFlags: 0
