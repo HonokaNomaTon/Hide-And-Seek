@@ -279,7 +279,7 @@ Transform:
   - {fileID: 593139590}
   - {fileID: 311585407}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &63085339
 PrefabInstance:
@@ -2321,13 +2321,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653220853}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -65, y: 25, z: 15}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -65, y: 26, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1309302703}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &683347822
 PrefabInstance:
@@ -2657,7 +2657,7 @@ Transform:
   - {fileID: 314904520}
   - {fileID: 103008039}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &727873685
 PrefabInstance:
@@ -2887,7 +2887,7 @@ GameObject:
   - component: {fileID: 804166952}
   - component: {fileID: 804166951}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: opaque wall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2913,13 +2913,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804166950}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 21, y: 25, z: 15}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 21, y: 26, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1309302703}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &818212299
 PrefabInstance:
@@ -3578,7 +3578,7 @@ Transform:
   - {fileID: 853444457}
   - {fileID: 1080450111}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1005437996
 PrefabInstance:
@@ -4620,7 +4620,7 @@ Transform:
   - {fileID: 1552158175}
   - {fileID: 487194264}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1188568978
 PrefabInstance:
@@ -4872,7 +4872,7 @@ Transform:
   - {fileID: 1388581332}
   - {fileID: 823016418}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1309302702
 GameObject:
@@ -4902,6 +4902,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1602503346}
+  - {fileID: 1341001976}
+  - {fileID: 804166952}
+  - {fileID: 653220855}
   - {fileID: 21785191}
   - {fileID: 726852302}
   - {fileID: 1716368826}
@@ -5101,7 +5105,7 @@ Transform:
   - {fileID: 504224853}
   - {fileID: 1746767743}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 10
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1341001974
 GameObject:
@@ -5114,7 +5118,7 @@ GameObject:
   - component: {fileID: 1341001976}
   - component: {fileID: 1341001975}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: opaque wall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5141,12 +5145,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341001974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25, y: 25, z: -20}
+  m_LocalPosition: {x: -25, y: 26, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1309302703}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1378258743
 PrefabInstance:
@@ -6218,7 +6222,7 @@ Transform:
   - {fileID: 67294116}
   - {fileID: 1101227438}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1592773574 stripped
 Transform:
@@ -6236,7 +6240,7 @@ GameObject:
   - component: {fileID: 1602503346}
   - component: {fileID: 1602503345}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: opaque wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6263,12 +6267,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602503344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25, y: 25, z: 55}
+  m_LocalPosition: {x: -25, y: 26, z: 55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1309302703}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1615881818
 PrefabInstance:
@@ -6467,7 +6471,7 @@ Transform:
   - {fileID: 1142934315}
   - {fileID: 1570659887}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1709019995
 PrefabInstance:
@@ -6577,7 +6581,7 @@ Transform:
   - {fileID: 1592773574}
   - {fileID: 207582249}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718459009
 GameObject:
@@ -6611,7 +6615,7 @@ Transform:
   - {fileID: 790330309}
   - {fileID: 1675796610}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 11
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1745875922 stripped
 Transform:
@@ -6815,7 +6819,7 @@ Transform:
   - {fileID: 1317174975}
   - {fileID: 605247789}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 9
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1787476086
 PrefabInstance:
@@ -7436,7 +7440,7 @@ Transform:
   - {fileID: 143674562}
   - {fileID: 1030104838}
   m_Father: {fileID: 1309302703}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &501879478548921794
 GameObject:
