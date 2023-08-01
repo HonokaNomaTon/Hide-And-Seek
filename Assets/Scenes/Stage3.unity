@@ -2295,7 +2295,7 @@ GameObject:
   - component: {fileID: 653220855}
   - component: {fileID: 653220854}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: opaque wall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
