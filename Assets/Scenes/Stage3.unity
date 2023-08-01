@@ -7324,12 +7324,19 @@ MonoBehaviour:
   _clearText: {fileID: 501879479644393998}
   _numberOfRemaining: {fileID: 501879478548921796}
   TongullPosList:
-  - {x: 10, y: 3, z: 52}
-  - {x: -53, y: 2, z: 3.6}
-  - {x: -23, y: 0.4, z: -9}
-  - {x: -34.36, y: 2.9, z: 36}
+  - {x: 7, y: 4.5, z: 41}
+  - {x: -53, y: 2.3, z: 6}
   - {x: -25, y: 0.7, z: 24}
-  - {x: 2.8, y: 1.45, z: -10}
+  - {x: -34.36, y: 2.9, z: 36}
+  - {x: -25, y: 0.6, z: -9}
+  - {x: 2, y: 1.4, z: -10}
+  TongullRotateList:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: -25, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: -3.319}
+  - {x: 0, y: 0, z: 13}
 --- !u!1 &501879479443547140
 GameObject:
   m_ObjectHideFlags: 0
