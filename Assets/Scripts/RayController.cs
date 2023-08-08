@@ -35,12 +35,15 @@ public class RayController : MonoBehaviour
                 target.GetComponent<Tongullkun>().Select();
             }
 
-
             // 右コントローラのAボタンを押した場合
             if (OVRInput.GetDown(OVRInput.RawButton.A) || Input.GetKeyDown(KeyCode.A))
             {
+                if (target.CompareTag("Target"))
+                {
+                    _numberOfRemaining.UpdateTongullkunCount();
+                }
                 target.GetComponent<Tongullkun>().Found();
-                _numberOfRemaining.UpdateTongullkunCount();
+                //_numberOfRemaining.UpdateTongullkunCount();
             }
         }
         else
