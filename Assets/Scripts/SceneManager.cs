@@ -42,11 +42,11 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
     /// </summary>
     public void ChangeScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Stage2");
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("Stage2");
         Debug.Log("Scene読み込み");
 
-        /*
-        switch (SceneManager.GetActiveScene().name)
+        
+        switch (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
         {
             case "Stage1":
                 _nextStageName = STAGE_NAME.Stage2.ToString();
@@ -59,7 +59,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
                 break;
         }
 
-        SceneManager.LoadScene(_nextStageName);
-        */
+        UnityEngine.SceneManagement.SceneManager.LoadScene(_nextStageName);
+        
     }
 }
