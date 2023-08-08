@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KanKikuchi.AudioManager;
 
 public class Tongullkun : MonoBehaviour
 {
@@ -54,6 +55,14 @@ public class Tongullkun : MonoBehaviour
     public void Found()
     {
         _state = TONGULL_STATE.FOUND;
+        if(this.tag == "Target")
+        {
+            SEManager.Instance.Play(SEPath.OK);
+        }
+        else if (this.tag == "Fake")
+        {
+            SEManager.Instance.Play(SEPath.NG);
+        }
         ShowJudgeSprite();
 
     }
