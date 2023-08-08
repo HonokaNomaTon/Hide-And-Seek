@@ -5,6 +5,7 @@
 /// </summary>
 public static class BGMPath{
 
+	public const string BGM = "BGM/BGM";
 
 }
 
