@@ -14,7 +14,9 @@ public class Tongullkun : MonoBehaviour
 
     // 判定用sprite
     [SerializeField] Sprite judgeSprite;
+    [SerializeField] Sprite BackJudgeSprite;
     [SerializeField] SpriteRenderer judgeSpriteRenderer;
+    [SerializeField] SpriteRenderer BackJudgeSpriteRebderer;
     [SerializeField] SpriteRenderer tongullkunSpriteRenderer;
 
     private TONGULL_STATE _state;
@@ -69,6 +71,7 @@ public class Tongullkun : MonoBehaviour
     private void ShowJudgeSprite()
     {
         judgeSpriteRenderer.sprite = judgeSprite;
+        BackJudgeSpriteRebderer.sprite = BackJudgeSprite;
         this.tag = "Finish";
         ChangeColor(1);
     }

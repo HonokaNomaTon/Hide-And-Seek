@@ -182,7 +182,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   judgeSprite: {fileID: 21300000, guid: 96887e384d4f741efaa68f9fd8ae6484, type: 3}
+  BackJudgeSprite: {fileID: 21300000, guid: 96887e384d4f741efaa68f9fd8ae6484, type: 3}
   judgeSpriteRenderer: {fileID: 7242700263127318028}
+  BackJudgeSpriteRebderer: {fileID: 5809914967713941086}
   tongullkunSpriteRenderer: {fileID: 3858961776757895755}
 --- !u!65 &3579253292611876253
 BoxCollider:
