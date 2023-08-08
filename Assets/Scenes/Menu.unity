@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 121377225}
   - component: {fileID: 121377224}
   - component: {fileID: 121377223}
-  - component: {fileID: 121377226}
   m_Layer: 5
   m_Name: Stage3Button
   m_TagString: Untagged
@@ -207,19 +206,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 121377224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 121377226}
-        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &121377224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,20 +245,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121377221}
   m_CullTransparentMesh: 1
---- !u!114 &121377226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121377221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0b5344410b942f0b67c7d2c23728dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scenemanager: {fileID: 1867451381}
-  num: 3
 --- !u!1 &222064583
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +909,6 @@ GameObject:
   - component: {fileID: 1497620670}
   - component: {fileID: 1497620669}
   - component: {fileID: 1497620668}
-  - component: {fileID: 1497620671}
   m_Layer: 5
   m_Name: Stage1Button
   m_TagString: Untagged
@@ -1008,19 +980,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1497620669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1497620671}
-        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1497620669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,20 +1019,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497620665}
   m_CullTransparentMesh: 1
---- !u!114 &1497620671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497620665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0b5344410b942f0b67c7d2c23728dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scenemanager: {fileID: 0}
-  num: 1
 --- !u!1 &1516223194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _oVRCameraController: {fileID: 1456473964}
-  _menuButton: {fileID: 0}
 --- !u!4 &1867451382
 Transform:
   m_ObjectHideFlags: 0
@@ -1365,7 +1310,6 @@ GameObject:
   - component: {fileID: 2043538384}
   - component: {fileID: 2043538383}
   - component: {fileID: 2043538382}
-  - component: {fileID: 2043538385}
   m_Layer: 5
   m_Name: Stage2Button
   m_TagString: Untagged
@@ -1437,19 +1381,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2043538383}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2043538385}
-        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2043538383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,20 +1420,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043538380}
   m_CullTransparentMesh: 1
---- !u!114 &2043538385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043538380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0b5344410b942f0b67c7d2c23728dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scenemanager: {fileID: 0}
-  num: 2
 --- !u!1 &2081384585
 GameObject:
   m_ObjectHideFlags: 0
