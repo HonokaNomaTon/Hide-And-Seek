@@ -4,7 +4,7 @@ using UnityEngine;
 public class RayController : MonoBehaviour
 {
     [SerializeField]private Transform anchor;
-    private float maxDistance = 7;
+    private float maxDistance = 15;
     private LineRenderer lineRenderer;
     GameObject target;
 
