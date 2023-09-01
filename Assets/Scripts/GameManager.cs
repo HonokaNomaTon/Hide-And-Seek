@@ -38,10 +38,7 @@ public class GameManager : MonoBehaviour
     private GameObject targetObj, fakeObj;
 
     [SerializeField]
-    private List<Vector3> TongullPosList = new List<Vector3>();
-
-    [SerializeField]
-    private List<Vector3> TongullRotateList = new List<Vector3>();
+    private List<Transform> TongullPositionList;
 
     void Start()
     {
@@ -61,17 +58,17 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < _generateTargetTongullkunCount; i++)
         {
-            int targetTongullPosNum = GetPosition();
-            targetObj = Instantiate(_targetTongullkunPrefab, TongullPosList[targetTongullPosNum], Quaternion.Euler(TongullRotateList[targetTongullPosNum]));
-            DeletePosition(targetTongullPosNum);
+            Transform t = GetTransform();
+            targetObj = Instantiate(_targetTongullkunPrefab,t.position ,t.rotation);
+
             _targetTongullkuns.Add(targetObj);
         }
 
         for (int i = 0; i < _generateFakeTongullkunCount; i++)
         {
-            int fakeTongullPosNum = GetPosition();
-            fakeObj = Instantiate(_fakeTongullkunPrefab, TongullPosList[fakeTongullPosNum], Quaternion.Euler(TongullRotateList[fakeTongullPosNum]));
-            DeletePosition(fakeTongullPosNum);
+            Transform t = GetTransform();
+            targetObj = Instantiate(_fakeTongullkunPrefab, t.position, t.rotation);
+
             _fakeTongullkuns.Add(fakeObj);
         }
 
@@ -98,10 +95,23 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// トンガルくん生成位置を取得
     /// </summary>
-    int GetPosition()
+    Transform GetTransform()
     {
-        int pos = Random.Range(0, TongullPosList.Count);
-        return pos;
+        int pos = Random.Range(0, TongullPositionList.Count);
+        Transform t = TongullPositionList[pos];
+
+        //TODO: トンガルくんの生成数が上回った時のエラー処置
+        //if (t == null)
+        //{
+        //    t = new GameObject().transform;
+        //}
+        //else
+        //{
+        //    DeletePosition(pos);
+        //}
+
+        DeletePosition(pos);
+        return t;
     }
 
     /// <summary>
@@ -109,6 +119,6 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void DeletePosition(int num)
     {
-        TongullPosList.RemoveAt(num);
+        TongullPositionList.RemoveAt(num);
     }
 }
