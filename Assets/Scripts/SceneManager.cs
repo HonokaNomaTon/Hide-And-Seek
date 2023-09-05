@@ -14,6 +14,7 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
     /// </summary>
     enum STAGE_NAME
     {
+        Menu,
         Stage1,
         Stage2,
         Stage3
@@ -35,6 +36,12 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
     void Update()
     {
 
+    }
+
+    public void MenuSecene()
+    {
+        _nextStageName = STAGE_NAME.Menu.ToString();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(_nextStageName);
     }
 
     /// <summary>

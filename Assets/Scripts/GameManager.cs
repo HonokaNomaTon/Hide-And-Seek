@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private Text _clearText;
+    [SerializeField]
+    private GameObject _MenuButton;
+    [SerializeField]
+    private GameObject _NextStageButton;
 
     [SerializeField]
     private NumberOfRemaining _numberOfRemaining;
@@ -81,13 +85,15 @@ public class GameManager : MonoBehaviour
     public void GameClear()
     {
         _clearText.text = "ゲームクリア！";
-        Invoke(nameof(NextStage), 2.0f);
+        _MenuButton.SetActive(true);
+        _NextStageButton.SetActive(true);
+        //Invoke(nameof(NextStage), 2.0f);
     }
 
     /// <summary>
     /// 次のステージへ遷移
     /// </summary>
-    void NextStage()
+    public void NextStage()
     {
         SceneManager.Instance.ChangeScene();
     }
