@@ -135,9 +135,11 @@ GameObject:
   - component: {fileID: 121377225}
   - component: {fileID: 121377224}
   - component: {fileID: 121377223}
+  - component: {fileID: 121377226}
+  - component: {fileID: 121377227}
   m_Layer: 5
   m_Name: Stage3Button
-  m_TagString: Untagged
+  m_TagString: MenuBtn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,6 +247,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121377221}
   m_CullTransparentMesh: 1
+--- !u!65 &121377226
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121377221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200, y: 100, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &121377227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121377221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8238b9f27eaa142c9b6102f29b3fc691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 3
 --- !u!1 &222064583
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 222064586}
   - component: {fileID: 222064585}
+  - component: {fileID: 222064587}
   - component: {fileID: 222064584}
   m_Layer: 0
   m_Name: RayController
@@ -378,7 +407,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222064583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63a60f59bda154dbb979f26f6de39248, type: 3}
   m_Name: 
@@ -400,6 +429,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &222064587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222064583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297e6ceb10b534e2cbfbfad73deebb26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchor: {fileID: 1456473963}
 --- !u!1 &841505175
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +939,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
   m_PrefabInstance: {fileID: 1456473962}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1456473965 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2015248, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 1456473962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1497620665
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,9 +956,11 @@ GameObject:
   - component: {fileID: 1497620670}
   - component: {fileID: 1497620669}
   - component: {fileID: 1497620668}
+  - component: {fileID: 1497620671}
+  - component: {fileID: 1497620672}
   m_Layer: 5
   m_Name: Stage1Button
-  m_TagString: Untagged
+  m_TagString: MenuBtn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1019,6 +1068,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497620665}
   m_CullTransparentMesh: 1
+--- !u!65 &1497620671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497620665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200, y: 100, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1497620672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497620665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8238b9f27eaa142c9b6102f29b3fc691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 1
 --- !u!1 &1516223194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,9 +1287,9 @@ Canvas:
   m_GameObject: {fileID: 1994945973}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 1456473965}
+  m_PlaneDistance: 10
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1310,9 +1385,11 @@ GameObject:
   - component: {fileID: 2043538384}
   - component: {fileID: 2043538383}
   - component: {fileID: 2043538382}
+  - component: {fileID: 2043538385}
+  - component: {fileID: 2043538386}
   m_Layer: 5
   m_Name: Stage2Button
-  m_TagString: Untagged
+  m_TagString: MenuBtn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1420,6 +1497,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043538380}
   m_CullTransparentMesh: 1
+--- !u!65 &2043538385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043538380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200, y: 100, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2043538386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043538380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8238b9f27eaa142c9b6102f29b3fc691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
 --- !u!1 &2081384585
 GameObject:
   m_ObjectHideFlags: 0
