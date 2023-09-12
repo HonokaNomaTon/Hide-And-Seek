@@ -69,4 +69,22 @@ public class SceneManager : SingletonMonoBehaviour<SceneManager>
         UnityEngine.SceneManagement.SceneManager.LoadScene(_nextStageName);
         
     }
+
+    public void ChangeScene(int index)
+    {
+        switch (index)
+        {
+            case 1:
+                _nextStageName = STAGE_NAME.Stage1.ToString();
+                break;
+            case 2:
+                _nextStageName = STAGE_NAME.Stage2.ToString();
+                break;
+            case 3:
+                _nextStageName = STAGE_NAME.Stage3.ToString();
+                break;
+        }
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(_nextStageName);
+    }
 }
