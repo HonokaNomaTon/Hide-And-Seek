@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +30,13 @@ public class GameManager : MonoBehaviour
         get { return _fakeTongullkuns; }
     }
 
+    // トンガルくんの生成位置を管理するリスト
+    [SerializeField]
+    private List<Transform> TongullPositionList;
+    private List<Vector3> RemainingTongullkunPositionList = new List<Vector3>();
+    private int _beforePosIndex = 0;
+    private int _nowPosIndex = 0;
+
     [SerializeField]
     private Text _clearText;
     [SerializeField]
@@ -41,19 +49,11 @@ public class GameManager : MonoBehaviour
 
     private GameObject targetObj, fakeObj;
 
-    [SerializeField]
-    private List<Transform> TongullPositionList;
-
     void Start()
     {
+        RemainingTongullkunPosSet();
         GenerateTongullkun();
     }
-
-    void Update()
-    {
-        
-    }
-
 
     /// <summary>
     /// 各トンガルくんを生成
@@ -104,18 +104,23 @@ public class GameManager : MonoBehaviour
     Transform GetTransform()
     {
         int pos = Random.Range(0, TongullPositionList.Count);
+
+        //トンガルくんの生成位置リストが0の時
+        if (TongullPositionList.Count == 0)
+        {
+            while (_beforePosIndex == _nowPosIndex)
+            {
+                _nowPosIndex = Random.Range(0, RemainingTongullkunPositionList.Count);
+                Debug.Log("_nowPosIndex: " + _nowPosIndex);
+                Debug.Log("_beforePosIndex: " + _beforePosIndex);
+            }
+
+            transform.position = RemainingTongullkunPositionList[_nowPosIndex];
+            _beforePosIndex = _nowPosIndex;
+            return transform;
+        }
+
         Transform t = TongullPositionList[pos];
-
-        //TODO: トンガルくんの生成数が上回った時のエラー処置
-        //if (t == null)
-        //{
-        //    t = new GameObject().transform;
-        //}
-        //else
-        //{
-        //    DeletePosition(pos);
-        //}
-
         DeletePosition(pos);
         return t;
     }
@@ -126,5 +131,15 @@ public class GameManager : MonoBehaviour
     private void DeletePosition(int num)
     {
         TongullPositionList.RemoveAt(num);
+    }
+
+    /// <summary>
+    /// 生成位置がないトンガルくん用の生成位置リストをセット
+    /// </summary>
+    private void RemainingTongullkunPosSet()
+    {
+        RemainingTongullkunPositionList.Add(new Vector3(0, 1, 5));
+        RemainingTongullkunPositionList.Add(new Vector3(5, 1, 10));
+        RemainingTongullkunPositionList.Add(new Vector3(10, 1, 20));
     }
 }
