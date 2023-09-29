@@ -11,6 +11,9 @@ public class RayController : MonoBehaviour
     [SerializeField]
     private NumberOfRemaining _numberOfRemaining;
 
+    private bool isGrab = false;
+    private string tagId = "";
+
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
@@ -23,11 +26,32 @@ public class RayController : MonoBehaviour
 
         lineRenderer.SetPosition(0, ray.origin);
 
+        // 右コントローラのトリガーDown
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch) || Input.GetKeyDown(KeyCode.R))
+        {
+            isGrab = true;
+        }
+        else if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch) || Input.GetKeyUp(KeyCode.R))
+        {
+            isGrab = false;
+        }
+
+        if (isGrab && tagId == "Grabbable" && target.transform.parent == null)
+        {
+            target.transform.parent = anchor.transform;
+        }
+        else if (!isGrab && target != null && target.transform.parent != null)
+        {
+            target.transform.parent = null;
+        }
+
+
         if (Physics.Raycast(ray, out hit, maxDistance))
         {
             lineRenderer.SetPosition(1, hit.point);
 
             target = hit.collider.gameObject;
+            tagId = target.tag;
             if (target.CompareTag("Target") || target.CompareTag("Fake"))
             {
                 //左のコントローラーを0.1秒間振動させる
@@ -50,10 +74,13 @@ public class RayController : MonoBehaviour
         {
             lineRenderer.SetPosition(1, ray.origin + (ray.direction * maxDistance));
 
-            if (target != null)
+            if (target != null && (tagId == "Target" || tagId == "Fake"))
             {
                 target.GetComponent<Tongullkun>().Hidden();
             }
+
+            //タグ初期化
+            tagId = "";
         }
     }
 
