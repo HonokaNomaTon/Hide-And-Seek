@@ -648,14 +648,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746851644}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 25, z: -50}
   m_LocalScale: {x: -100, y: -50, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2102200517}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &746851646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1185,14 +1185,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055957144}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 50, y: 25, z: 0}
   m_LocalScale: {x: -100, y: -50, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2102200517}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &2055957146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1505,14 +1505,14 @@ MonoBehaviour:
   _fakeTongullkunPrefab: {fileID: 3858961775722806890, guid: 9309f4982c5294208b567df937d74abb, type: 3}
   _generateTargetTongullkunCount: 1
   _generateFakeTongullkunCount: 2
-  _clearText: {fileID: 501879479644393998}
-  _MenuButton: {fileID: 19514139}
-  _NextStageButton: {fileID: 2119236913}
-  _numberOfRemaining: {fileID: 501879478548921796}
   TongullPositionList:
   - {fileID: 197242065}
   - {fileID: 1417808047}
   - {fileID: 2013701962}
+  _clearText: {fileID: 501879479644393998}
+  _MenuButton: {fileID: 19514139}
+  _NextStageButton: {fileID: 2119236913}
+  _numberOfRemaining: {fileID: 501879478548921796}
 --- !u!114 &501879478548921799
 MonoBehaviour:
   m_ObjectHideFlags: 0
